@@ -40,7 +40,9 @@ class example_commandscript : public CommandScript
 
         static bool HandleHelloWorldCommand(ChatHandler* handler, const char* /*args*/)
         {
-            handler->PSendSysMessage("Hello World");
+            handler->PSendSysMessage("Bienvenid@ a Lords of Chaos");
+            handler->PSendSysMessage("WEB: http://lordsofchaos.no-ip.biz");
+            handler->PSendSysMessage("");
             return true;
         }
 
