@@ -124,15 +124,15 @@ bool MySQLConnection::Open()
 
     if (m_Mysql)
     {
-        if (!m_reconnecting)
+        /*if (!m_reconnecting)
         {
             sLog->outSQLDriver("MySQL client library: %s", mysql_get_client_info());
             sLog->outSQLDriver("MySQL server ver: %s ", mysql_get_server_info(m_Mysql));
             if (mysql_get_server_version(m_Mysql) != mysql_get_client_version())
                 sLog->outSQLDriver("[WARNING] MySQL client/server version mismatch; may conflict with behaviour of prepared statements.");
-        }
+        }*/
 
-        sLog->outDetail("Connected to MySQL database at %s", m_connectionInfo.host.c_str());
+        sLog->outDetail("Conectado a la base de datos MySQL en %s", m_connectionInfo.host.c_str());
         mysql_autocommit(m_Mysql, 1);
 
         // set connection properties to UTF8 to properly handle locales for different
